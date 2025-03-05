@@ -32,4 +32,15 @@ public class Cuenta {
     public void consignar(float cantidad){
         saldo=saldo+cantidad;
     }
+    
+    public void retirar(float cantidad){
+        float nuevoSaldoTemporal= saldo-cantidad;
+        
+        if (nuevoSaldoTemporal >= 0){
+            saldo = saldo - cantidad;
+        } else{
+            System.out.println("La cantidad a retirar excede el saldo actual: ");
+        }
+        
+    }
 }
