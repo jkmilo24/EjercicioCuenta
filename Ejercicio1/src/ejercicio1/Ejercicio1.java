@@ -18,20 +18,39 @@ public class Ejercicio1 {
         
         // crear objeto de la clase cuenta
         
-        Cuenta cuenta1 = new Cuenta(10000, 0);
-        cuenta1.imprimir();
+        System.out.println("Cuenta de Ahorros: ");
         
-        cuenta1.consignar(2501);
-        System.out.println("");
-        cuenta1.imprimir();
+        final float SALDO = 15000;
+        final float TASA_ANUAL = 0.10f;
         
-        cuenta1.retirar(1501);
-        System.out.println("");
-        cuenta1.imprimir();
+        CuentaAhorros cuentaAhorros1 = new CuentaAhorros(SALDO, TASA_ANUAL);
         
-        cuenta1.retirar(15000);
         System.out.println("");
-        cuenta1.imprimir();
+        
+        cuentaAhorros1.imprimir();
+        
+        System.out.println("");
+        
+        cuentaAhorros1.consignar(5000);
+        cuentaAhorros1.consignar(2000);
+        cuentaAhorros1.consignar(3000);
+        cuentaAhorros1.consignar(1000);
+        cuentaAhorros1.imprimir();
+        
+        System.out.println("");
+        
+        System.out.println();
+        // retirar valor de 2000
+        cuentaAhorros1.retirar(2000);
+        cuentaAhorros1.retirar(1000);
+        cuentaAhorros1.retirar(100);
+        cuentaAhorros1.retirar(200);
+        cuentaAhorros1.retirar(500);
+        cuentaAhorros1.retirar(500);
+        cuentaAhorros1.retirar(10000);
+        
+        cuentaAhorros1.imprimir();
+
     }
     
 }
