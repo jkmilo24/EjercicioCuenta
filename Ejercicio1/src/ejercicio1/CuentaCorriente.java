@@ -27,9 +27,28 @@ public class CuentaCorriente extends Cuenta {
     
     public void consignar(float cantidad){
         float sobregiroTemporal = sobregiro - cantidad;
+        //sobregiroTemporal = -3000
         
-        if (sobregiro){
-            
+        if (sobregiro > 0){
+            if(sobregiroTemporal > 0){
+                sobregiro = sobregiroTemporal;
+            } else {
+                saldo = saldo - sobregiroTemporal;
+                sobregiro = 0;
+            }
+        } else {
+            super.consignar(cantidad);
         }
+    }
+    
+    public void extractoMensual(){
+        super.extractoMensual();
+    }
+    
+    public void imprimir(){
+        System.out.println("Saldo: " + saldo);
+        System.out.println("COMISION MENSUAL: " + comisionMensual);
+        System.out.println("NUMERO DE TRANSACIONES: " + (numeroConsignaciones + numeroRetiros));
+        System.out.println("Sobregiro: " + sobregiro);
     }
 }
