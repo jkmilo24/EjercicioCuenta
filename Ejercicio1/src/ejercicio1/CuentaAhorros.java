@@ -46,7 +46,6 @@ public class CuentaAhorros extends Cuenta {
         System.out.println("Saldo: " + saldo);
         System.out.println("COMISION MENSUAL: " + comisionMensual);
         System.out.println("NUMERO DE TRANSACIONES: " + (numeroConsignaciones + numeroRetiros));
-        System.out.println("Steven Estuvo aqui");
     }
     
     public void isActive() {
